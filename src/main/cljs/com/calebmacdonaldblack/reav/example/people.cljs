@@ -6,7 +6,7 @@
   [{:d/keys [db]} _input]
   {::pco/output [{:people [:person/id]}]}
   {:people
-   (d/q '[:find [(pull ?e [:person/id]) ...]
-          :where
-          [?e :person/id]]
-        db)})
+    (->> (d/datoms db :avet :person/id)
+         (sort-by :tx)
+         (reverse)
+         (map (comp (partial hash-map :person/id) :v)))})
