@@ -1,0 +1,8 @@
+{:deps     true
+ :dev-http {8000 "src/main/resources"}
+ :nrepl    {:port 9000}
+ :builds   {:app {:target     :browser
+                  :output-dir "src/main/resources/assets/js/compiled"
+                  :asset-path "/assets/js/compiled"
+                  :devtools   {:watch-dir "src/main/resources"}
+                  :modules    {:app {:entries [com.calebmacdonaldblack.reav.example.core]}}}}}

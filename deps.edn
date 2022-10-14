@@ -1,0 +1,9 @@
+{:deps    {org.clojure/clojure   {:mvn/version "1.11.1"}
+           reagent/reagent       {:mvn/version "1.1.1"}
+           com.wsscode/pathom3   {:mvn/version "2021.07.30-alpha"}
+           datascript/datascript {:mvn/version "1.3.15"}
+           thheller/shadow-cljs  {:mvn/version "2.20.3"}}
+ :paths   ["src/main/cljs" "src/main/resources"]
+ :aliases {:local {:extra-deps {org.clojure/tools.namespace {:mvn/version "1.2.0"}
+                                org.clojure/tools.nrepl     {:mvn/version "0.2.13"}}}}}
+
